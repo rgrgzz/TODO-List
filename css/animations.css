@@ -1,0 +1,47 @@
+/* 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#todoList li.new-item {
+    animation: fadeIn 0.05s ease-out;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+    .container {
+        margin: 30px auto;
+    }
+
+    li {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .todo-content {
+        flex: 1;
+    }
+
+    .action-buttons {
+        display: flex;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

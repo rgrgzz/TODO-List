@@ -1,0 +1,159 @@
+input {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--black);
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--black);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(55, 53, 47, 0.85);
+}
+
+ul {
+    list-style: none;
+}
+
+.todo-content {
+    font-weight: 450;
+    display: flex;
+    align-items: center; 
+    flex: 1;
+    min-width: 0;
+}
+
+.text-wrapper {
+    display: flex;
+    align-items: center; 
+    flex: 1;
+}
+
+
+.text-wrapper span,
+.todo-content span {
+    display: block;  
+    text-align: left;
+    word-break: break-all;
+    width: 100%;  
+}
+
+.todo-checkbox {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 2px solid var(--border);
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: white;
+    flex: 0 0 auto;
+    margin-right: 16px;
+    margin-top: 0;  
+    flex-shrink: 0;
+}
+
+.todo-checkbox:checked {
+    border-color: var(--black);
+}
+
+.todo-checkbox:checked::after {
+    content: '✔';
+    position: absolute;
+    color: var(--black);
+    font-size: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todo-checkbox:hover {
+    background-color: var(--hover);
+}
+
+.todo-checkbox:checked:hover {
+    background-color: var(--bg);
+    opacity: 0.8;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #d34738;
+}
+
+li {
+    background: white;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease; 
+    border: 1px solid var(--border);
+    cursor: move;
+    user-select: none;  /* 드래그 중 텍스트 선택 방지 */
+}
+
+li:hover {
+    background-color: var(--bg);
+    border-color: var(--black);
+}
+
+li:active {
+    background-color: var(--hover);  
+    cursor: grabbing; 
+}
+
+/* 상태 관련 스타일 */
+.completed {
+    color: var(--gray);
+}
+
+.sortable-ghost {
+    opacity: 0.4;
+    background-color: var(--bg) !important;
+    border: 2px dashed var(--gray) !important;
+}
+
+
+.sortable-drag {
+    background-color: white !important;
+    border: 1px solid var(--black) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    cursor: grabbing !important;
+    opacity: 0.9;
+}
+
+/* 드래그 시작할 때의 스타일 */
+.sortable-chosen {
+    background-color: white !important;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;  
+    align-self: center;
+}

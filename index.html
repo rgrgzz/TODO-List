@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/calendernScroll.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@450;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <h1>✓ todo list</h1>
+                <p class="subtitle">오늘의 할 일을 관리하세요</p>
+            </div>
+            
+            <div class="calendar-section">
+                <input type="text" id="dateSelector" placeholder="날짜 선택">
+                <span class="selected-date"></span>
+            </div>
+            
+            <div class="input-section">
+                <input type="text" id="todoInput" placeholder="새로운 할 일을 입력하세요. Enter를 눌러 추가하세요.">
+                <button onclick="addTodo()" class="add-btn">추가</button>
+            </div>
+            <ul id="todoList"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="JStodo.js" defer></script>
+</body>
+</html>
